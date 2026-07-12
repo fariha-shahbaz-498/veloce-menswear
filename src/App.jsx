@@ -535,7 +535,7 @@ function App() {
             <section style={{ maxWidth: '1200px', margin: '0 auto 2rem auto', padding: '0 2rem' }}>
               <div className="luxury-hero-banner" style={{ width: '100%', aspectRatio: '16/9', maxHeight: '600px', borderRadius: '8px', overflow: 'hidden', position: 'relative', backgroundColor: '#ffffff' }}>
                 <video 
-                  src={heroVideo} 
+                  src={'heroVideo'} 
                   autoPlay 
                   loop 
                   playsInline 
@@ -567,10 +567,10 @@ function App() {
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
                 { [
-  { name: 'men wears', img: menImg, desc: 'Premium Suits, Casual Shirts, and Luxury Watches' },
-  { name: 'Womens Wear', img: womenImg, desc: 'Embroidered Shararas, Suits, and Luxury Beauty Essentials' },
-  { name: 'luxury watches', img: watImg, desc: 'premium and luxury watches' },
-  { name: 'beauty products', img: yImg, desc: 'shining and beauty' }
+  { name: 'men wears', img: 'menImg', desc: 'Premium Suits, Casual Shirts, and Luxury Watches' },
+  { name: 'Womens Wear', img: 'womenImg', desc: 'Embroidered Shararas, Suits, and Luxury Beauty Essentials' },
+  { name: 'luxury watches', img: 'watImg', desc: 'premium and luxury watches' },
+  { name: 'beauty products', img: 'yImg', desc: 'shining and beauty' }
 ].map((dept, index) => (
   <div key={index} className="luxury-item-card" onClick={() => { setChosenDept(dept.name); setChosenCategory('All'); setCurrentView('catalog'); }}>
     <div className="media-aspect-ratio-box" style={{ height: '750px' }}>
