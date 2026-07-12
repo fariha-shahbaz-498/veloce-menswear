@@ -12,6 +12,11 @@ const systemStyles = `
     50% { filter: brightness(1.02); }\r
     100% { filter: brightness(1); }\r
   }
+    import heroVideo from './a.mp4';
+import menImg from './me.png';
+import womenImg from './wo.png';
+import watImg from './wat.png';
+import yImg from './y.png';
  .media-aspect-ratio-box {
     width: 100%;
     /* 1. Sets a beautiful portrait layout ratio */
@@ -530,7 +535,7 @@ function App() {
             <section style={{ maxWidth: '1200px', margin: '0 auto 2rem auto', padding: '0 2rem' }}>
               <div className="luxury-hero-banner" style={{ width: '100%', aspectRatio: '16/9', maxHeight: '600px', borderRadius: '8px', overflow: 'hidden', position: 'relative', backgroundColor: '#ffffff' }}>
                 <video 
-                  src="/a.mp4" 
+                  src={heroVideo} 
                   autoPlay 
                   loop 
                   playsInline 
@@ -561,16 +566,16 @@ function App() {
                 Modern clothing crafted with comfort, quality, and confidence in mind.
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
-                {[
-                  { name: 'men wears', img: '/me.png' ,desc: 'Premium Suits, Casual Shirts, and Luxury Watches'},
-                  { name: 'Womens Wear', img: '/wo.png',desc: 'Embroidered Shararas, Suits, and Luxury Beauty Essentials' },
-                  { name: 'luxury watches', img: '/wat.png',desc:'premium and luxury watches' },
-                  { name: 'beauty products', img: '/y.png',desc:'shining and beauty' }
-                ].map((dept, index) => (
-                  <div key={index} onClick={() => { setChosenDept(dept.name); setChosenCategory('All'); setCurrentView('catalog'); }} className="luxury-item-card">
-                    <div className="media-aspect-ratio-box" style={{ height: '750px' }}>
-                      <img src={dept.img} alt={dept.name} />
-                    </div>
+                { [
+  { name: 'men wears', img: menImg, desc: 'Premium Suits, Casual Shirts, and Luxury Watches' },
+  { name: 'Womens Wear', img: womenImg, desc: 'Embroidered Shararas, Suits, and Luxury Beauty Essentials' },
+  { name: 'luxury watches', img: watImg, desc: 'premium and luxury watches' },
+  { name: 'beauty products', img: yImg, desc: 'shining and beauty' }
+].map((dept, index) => (
+  <div key={index} className="luxury-item-card" onClick={() => { setChosenDept(dept.name); setChosenCategory('All'); setCurrentView('catalog'); }}>
+    <div className="media-aspect-ratio-box" style={{ height: '750px' }}>
+      <img src={dept.img} alt={dept.name} />
+    </div>
                     <div style={{ padding: '1.25rem', textAlign: 'center', backgroundColor: '#ffffff' }}>
                       <h4 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 'bold' }}>{dept.name}</h4>
                     </div>
