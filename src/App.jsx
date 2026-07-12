@@ -562,10 +562,10 @@ function App() {
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
                 {[
-                  { name: 'men wears', img: '/ME.png' ,desc: 'Premium Suits, Casual Shirts, and Luxury Watches'},
-                  { name: 'Womens Wear', img: '/WO.png',desc: 'Embroidered Shararas, Suits, and Luxury Beauty Essentials' },
-                  { name: 'luxury watches', img: '/WAT.png',desc:'premium and luxury watches' },
-                  { name: 'beauty products', img: '/Y.png',desc:'shining and beauty' }
+                  { name: 'men wears', img: '/me.png' ,desc: 'Premium Suits, Casual Shirts, and Luxury Watches'},
+                  { name: 'Womens Wear', img: '/wo.png',desc: 'Embroidered Shararas, Suits, and Luxury Beauty Essentials' },
+                  { name: 'luxury watches', img: '/wat.png',desc:'premium and luxury watches' },
+                  { name: 'beauty products', img: '/y.png',desc:'shining and beauty' }
                 ].map((dept, index) => (
                   <div key={index} onClick={() => { setChosenDept(dept.name); setChosenCategory('All'); setCurrentView('catalog'); }} className="luxury-item-card">
                     <div className="media-aspect-ratio-box" style={{ height: '750px' }}>
